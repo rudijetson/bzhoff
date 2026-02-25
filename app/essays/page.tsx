@@ -32,6 +32,14 @@ export const metadata: Metadata = {
 
 const essays = [
   {
+    title: "The AI Safety Test: When Your Brand Meets the Pentagon",
+    slug: "ai-safety-test",
+    description: "Anthropic built its entire identity on AI safety. Now the Pentagon is demanding they drop their guardrails — threatening to invoke the Defense Production Act and label the company a national security risk. With 47 cited sources, this investigation asks: was AI safety ever real, or just branding?",
+    publishedDate: "February 25, 2026",
+    readTime: "18 min read",
+    tags: ["AI Safety", "National Security", "Anthropic", "Pentagon", "Defense Production Act", "Investigative"]
+  },
+  {
     title: "The Cost of Colossus: What Memphis Reveals About AI's Future",
     slug: "cost-of-colossus",
     description: "Five days after Grok 4 became one of the world's most powerful AI models, Alexis Humphreys had her first severe asthma attack in 15 years. An investigation into what happens when Silicon Valley's 'move fast' mentality meets a community already choking on decades of pollution. Synthesized from 18 sources including Reddit, YouTube, and investigative journalism.",
