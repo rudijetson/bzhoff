@@ -39,7 +39,7 @@ export function ProfileHeader({ profile, isCreatorProfile }: ProfileHeaderProps)
             <Github className="h-4 w-4" />
           </Link>
           <Link
-            href="mailto:brandonzhoff@gmail.com"
+            href="mailto:hoff@learnrudi.com"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             <Mail className="h-4 w-4" />

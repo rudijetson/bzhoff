@@ -4,27 +4,32 @@ import { ChevronRight, Mail, Github, Linkedin } from 'lucide-react'
 import { Button } from "@/app/components/primitives"
 import { Footer } from "@/app/components/features"
 import { Timeline } from "@/app/components/composed"
+import { PressSection } from "@/app/components/sections/press-section"
+import { SpeakingSection } from "@/app/components/sections/speaking-section"
+import { CaseStudySection } from "@/app/components/sections/case-study-section"
+import { timeline } from "@/app/data/timeline"
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Brandon Z. Hoff | AI Literacy Researcher',
-  description: 'AI literacy researcher and founder of RUDI (Responsible Use of Digital Intelligence). 8,000+ hours mastering AI, teaching 80,000+ people to build software with AI. Background in e-commerce, finance, and global business.',
+  title: 'About Brandon Z. Hoff | Chief AI Facilitator & Founder, RUDI Applied GenAI',
+  description: 'Brandon Z. Hoff is the founder and Chief AI Facilitator of RUDI Applied GenAI. AI literacy researcher, trainer, and advocate with 500+ professionals trained across education, legal, healthcare, and enterprise sectors.',
   keywords: [
     'Brandon Hoff bio',
     'AI literacy researcher',
     'RUDI founder',
+    'Chief AI Facilitator',
+    'AI capacity building',
     'AI education',
     'AI training expert',
-    'full-stack developer',
-    'AI-powered development',
+    'RUDI Applied GenAI',
     'technology democratization'
   ],
   alternates: {
     canonical: 'https://bzhoff.com/about'
   },
   openGraph: {
-    title: 'About Brandon Z. Hoff | AI Literacy Researcher',
-    description: 'AI literacy researcher and RUDI founder teaching people to build software with AI',
+    title: 'About Brandon Z. Hoff | Chief AI Facilitator & Founder, RUDI Applied GenAI',
+    description: 'AI literacy researcher and RUDI founder helping organizations adopt AI responsibly through literacy-first training.',
     url: 'https://bzhoff.com/about',
     type: 'profile',
     images: [{
@@ -36,64 +41,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Brandon Z. Hoff | AI Literacy Researcher',
-    description: 'AI literacy researcher and RUDI founder teaching people to build software with AI',
+    title: 'About Brandon Z. Hoff | Chief AI Facilitator & Founder, RUDI Applied GenAI',
+    description: 'AI literacy researcher and RUDI founder helping organizations adopt AI responsibly through literacy-first training.',
     images: ['https://bzhoff.com/og-image.png'],
   }
 }
-
-const timelineItems = [
-  {
-    year: "2022-Present",
-    title: "AI Literacy Research & RUDI",
-    description: "After ChatGPT's release, dedicated over 8,000 hours to mastering AI technologies. Founded RUDI (Responsible Use of Digital Intelligence) to advance AI literacy and responsible adoption, developing original frameworks and training programs. Built a community of 80,000+ tech enthusiasts while creating AI-powered solutions."
-  },
-  {
-    year: "2019-2023",
-    title: "Founded Heritage Hill LLC",
-    description: "Built a seven-figure e-commerce cooperative specializing in collegiate textiles. Secured 30+ collegiate licenses, managed 20 cooperative members, and featured in GQ and Essence Magazine. Raised $500K in seed funding and secured $300K in retail partnerships."
-  },
-  {
-    year: "2016-2019",
-    title: "Payment Services & Analytics",
-    description: "Led product management for payment processing services, conducting advanced analytics using R and SQL. Developed data-driven strategies for payment systems optimization and merchant services."
-  },
-  {
-    year: "2016",
-    title: "MBA & Global Experience",
-    description: "Earned MBA from EDHEC Business School in France. Led sustainability initiatives in Tanzania and South Africa, and pitched to VCs in Silicon Valley, expanding global business perspective."
-  },
-  {
-    year: "2015",
-    title: "First E-commerce Success",
-    description: "Founded and successfully exited an e-commerce business specializing in hoverboard chargers and Amazon-eBay arbitrage, marking first entrepreneurial acquisition."
-  },
-  {
-    year: "2013-2014",
-    title: "Global Supply Chain at Macy's",
-    description: "Led sourcing and procurement strategies, focusing on supply chain transformation and global operations optimization."
-  },
-  {
-    year: "2012",
-    title: "Early Tech Development",
-    description: "Started learning web development and Python programming, creating Monte Carlo simulations for Vegas betting analytics, marking first steps into technical development."
-  },
-  {
-    year: "2010",
-    title: "Microsoft Marketing Specialist",
-    description: "Member of the Surface tablet launch team, contributing to Microsoft's innovative hardware rollout strategy."
-  },
-  {
-    year: "2006-2009",
-    title: "Retail Banking Leadership",
-    description: "Progressed through banking roles to branch management, developing expertise in financial operations and team leadership."
-  },
-  {
-    year: "2004-2005",
-    title: "Gaming Industry Pioneer",
-    description: "Professional gamer and co-founder of a subscription-based gaming platform, later acquired by SportsGamer, demonstrating early entrepreneurial success."
-  }
-]
 
 export default function AboutPage() {
   return (
@@ -109,49 +61,72 @@ export default function AboutPage() {
         </nav>
 
         <div className="mb-16">
+          {/* Hero photo */}
           <Image
-            src="/images/authors/hoff-linkedin.jpg"
-            alt="Brandon Hoff"
+            src="/images/authors/hoff-headshot.jpg"
+            alt="Brandon Z. Hoff"
             width={96}
             height={96}
             className="rounded-lg mb-6"
           />
           <h1 className="text-2xl font-semibold mb-6">About Me</h1>
-          
-          <div className="prose prose-sm prose-gray dark:prose-invert">
-            <p className="text-base mb-4">
-              I'm an AI literacy researcher and the founder of RUDI (Responsible Use of Digital Intelligence). My mission is simple: democratize access to technology by teaching non-technical individuals how to build sophisticated software using AI tools.
-            </p>
 
+          <div className="prose prose-sm prose-gray dark:prose-invert">
+            {/* Medium bio */}
             <p className="text-base mb-4">
-              After ChatGPT's release in 2022, I dedicated over 8,000 hours to mastering AI technologies and understanding their transformative potential. What I discovered changed everything: generative AI makes programming accessible to creative people who never went to computer science school. If you have ideas and want to build digital products, AI can help you bring them to life.
+              Brandon Z. Hoff is the founder and Chief AI Facilitator of RUDI Applied GenAI, an AI capacity-building studio that helps organizations adopt artificial intelligence responsibly through literacy-first training and governance frameworks. With a background spanning financial data analytics, cooperative economics, and applied AI research, Brandon brings a rare combination of technical fluency and organizational change expertise to a space crowded with tool vendors and hype.
             </p>
 
             <p className="text-base mb-8">
-              Today, I lead a community of 80,000+ tech enthusiasts, develop AI-powered solutions, and create frameworks for responsible AI adoption. My diverse background—spanning e-commerce ($3M cooperative), finance, and global business experience across Cincinnati, Tanzania, and Europe—informs my belief that linguistic capital and programming shouldn't be gatekept. AI changes everything.
+              His work has been featured by NPR, GQ, Essence, and MSNBC. He has trained 500+ professionals across education, legal, healthcare, and enterprise sectors, grown an 80,000+ member AI literacy community on TikTok, and built 14+ production AI applications—all using AI. Brandon advises the Kentucky State Senate on technology policy and serves clients ranging from HBCUs to $40M logistics companies.
             </p>
 
+            {/* New sections: Press, Speaking, Case Studies */}
+            <div className="not-prose space-y-12 mb-12">
+              <PressSection />
+              <SpeakingSection />
+              <CaseStudySection />
+            </div>
+
+            {/* Long bio */}
+            <h2 className="mb-4">Background</h2>
+            <p className="text-base mb-4">
+              Brandon Z. Hoff began his career in financial services, building predictive analytics models for loan payment assessment and micro-lending operations—work he now recognizes as early machine learning. After being laid off, he co-founded Heritage Hill Cooperative, an HBCU-focused e-commerce cooperative that he scaled to $3M in revenue and 125 retail doors, using ML-based demand forecasting along the way. That chapter taught him that the growth of any organization can never outpace the quality of its people systems.
+            </p>
+
+            <p className="text-base mb-4">
+              When ChatGPT launched in late 2022, Brandon went all in. He logged 1,100+ days and approximately 8,000 hours across AI platforms, taught himself to build software products from scratch, and started sharing what he learned with an 80,000+ following on TikTok. The more he learned, the more he recognized AI literacy as the new functional literacy—a structural advantage, like Bourdieu's linguistic capital, that would widen the gap between organizations that invested in it and those that didn't.
+            </p>
+
+            <p className="text-base mb-4">
+              That conviction became RUDI (Responsible Use, Digital Intelligence), a structured AI adoption framework built on the principle that psychological comfort must precede technical competency. The RUDI methodology—three swim lanes (Conceptual, Operational, Governance) across five proficiency levels—is now deployed at educational service centers, universities, law firms, and enterprise organizations. Its flagship engagement with Warren County ESC produced a documented 524% ROI: 95% comfort achieved, 60% literacy gains in eight weeks, and an 85% reduction in teacher evaluation time (from 2–3 hours to 15–20 minutes per evaluation).
+            </p>
+
+            <p className="text-base mb-8">
+              Today Brandon leads training and consulting from Cincinnati, where he also teaches at the University of Illinois–Springfield, advises the Kentucky State Senate on AI policy, and continues building open-source AI tools under the RUDI platform. He is a member of Phi Beta Sigma Fraternity Inc. and comes from a family of educators—a lineage that shapes every program he designs.
+            </p>
+
+            {/* Timeline */}
             <h2 className="mb-6">Journey & Accomplishments</h2>
-            <Timeline items={timelineItems} className="mb-8" />
+            <Timeline
+              items={timeline.map((entry) => ({
+                year: entry.date,
+                title: entry.title,
+                description: entry.description,
+              }))}
+              className="mb-8"
+            />
 
-            <h2>Technical Skills</h2>
-            <p>
-              Through immersive learning with AI tools, I've developed proficiency in full-stack development using Next.js, React, Python, and various AI APIs. This technical foundation enables me to build practical solutions that bridge traditional business needs with emerging technologies.
-            </p>
-
-            <h2>Philosophy</h2>
-            <p>
-              As a citizen of the world who has lived across Cincinnati, Tanzania, and Europe, I bring a global perspective to technology development. My interests in philosophy, theology, and continuous learning drive my approach to creating technology that matters and empowers others.
-            </p>
-
+            {/* Beyond Work */}
             <h2>Beyond Work</h2>
             <p>
-              I'm deeply committed to sharing knowledge and building communities around responsible AI use. Through social media and speaking engagements, I help others understand and leverage AI tools effectively, focusing on both technical implementation and ethical considerations.
+              Brandon's philosophy—that "technology is easy, adoption is hard"—is rooted in something deeper than strategy. He comes from a family of educators and carries that inheritance into every room he enters: the belief that capability, not tools, is what transforms people and organizations. He is a member of Phi Beta Sigma Fraternity Inc., is active in Cincinnati's cooperative and community economic development ecosystem (Coop Cincy, Greater Cincinnati Micro Initiative, BYOC Youth Center), and was featured in the documentary <em>Works for All</em>, about Cincinnati's cooperative economy. His interests span economics, theology, organizational systems, and the philosophical stakes of intelligence itself.
             </p>
 
+            {/* Contact */}
             <h2 className="!mt-12">Get in Touch</h2>
             <div className="flex flex-col gap-4 not-prose">
-              <Link 
+              <Link
                 href="mailto:brandonzhoff@gmail.com"
                 className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
@@ -181,4 +156,3 @@ export default function AboutPage() {
     </div>
   )
 }
-

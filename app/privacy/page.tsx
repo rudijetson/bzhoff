@@ -60,7 +60,7 @@ export default function PrivacyPage() {
           <li>Go to your Facebook Settings & Privacy</li>
           <li>Click "Settings" then "Apps and Websites"</li>
           <li>Find "Social Media Publisher" and click "Remove"</li>
-          <li>Alternatively, email us at: brandonzhoff@gmail.com</li>
+          <li>Alternatively, email us at: hoff@learnrudi.com</li>
         </ol>
         <p>
           We will delete all stored data within 30 days of your request. Since our application stores data locally on your device
@@ -80,7 +80,7 @@ export default function PrivacyPage() {
         <h2>10. Contact Us</h2>
         <p>If you have questions about this Privacy Policy, please contact us at:</p>
         <p>
-          Email: brandonzhoff@gmail.com<br />
+          Email: hoff@learnrudi.com<br />
           Business: P&P Management Group LLC
         </p>
 

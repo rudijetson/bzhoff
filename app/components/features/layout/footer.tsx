@@ -40,7 +40,7 @@ export function Footer() {
 
       <div className="flex items-center gap-4">
         <a
-          href="mailto:brandonzhoff@gmail.com"
+          href="mailto:hoff@learnrudi.com"
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           <Mail className="h-4 w-4" />
