@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXP_01 // MACHINES KEPT THEIR PROMISE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', monospace, sans-serif;
+            line-height: 1.5;
+            color: #000;
+            background: #fff;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .experiment-header {
+            border: 2px solid #000;
+            padding: 1rem 1.5rem;
+            margin-bottom: 3rem;
+            background: #000;
+            color: #fff;
+        }
+
+        .experiment-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .experiment-label::before {
+            content: ">> ";
+            color: #0f62fe;
+        }
+
+        h1 {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.875rem;
+            color: #fff;
+            margin-top: 0.5rem;
+            opacity: 0.8;
+        }
+
+        .meta {
+            border-left: 4px solid #0f62fe;
+            padding-left: 1.5rem;
+            margin: 3rem 0;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.875rem;
+            line-height: 1.8;
+        }
+
+        .meta-row {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            margin-bottom: 0.25rem;
+        }
+
+        .meta-label {
+            font-weight: 600;
+        }
+
+        h2 {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 4rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid #000;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::before {
+            content: "// ";
+            color: #0f62fe;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .process-grid {
+            display: grid;
+            gap: 1px;
+            background: #000;
+            border: 2px solid #000;
+            margin: 2rem 0;
+        }
+
+        .process-step {
+            background: #fff;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .process-step::before {
+            content: attr(data-step);
+            position: absolute;
+            top: 0.75rem;
+            left: 0.75rem;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #0f62fe;
+            letter-spacing: 0.1em;
+        }
+
+        .process-step h3 {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .process-step p {
+            font-size: 0.9375rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .process-step .metric {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.8125rem;
+            background: #f4f4f4;
+            padding: 0.5rem 0.75rem;
+            margin: 1rem 0;
+            border-left: 3px solid #0f62fe;
+        }
+
+        .process-step a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            border: 2px solid #000;
+            transition: all 0.15s ease;
+        }
+
+        .process-step a:hover {
+            background: #0f62fe;
+            border-color: #0f62fe;
+        }
+
+        .workflow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: #f4f4f4;
+            border: 2px solid #000;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .workflow-item {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+        }
+
+        .workflow-arrow {
+            color: #0f62fe;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 1rem;
+        }
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1px;
+            background: #000;
+            border: 2px solid #000;
+            margin: 2rem 0;
+        }
+
+        .learning-item {
+            background: #fff;
+            padding: 1.5rem;
+        }
+
+        .learning-item strong {
+            font-family: 'IBM Plex Mono', monospace;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .learning-item p {
+            font-size: 0.875rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .note {
+            background: #f4f4f4;
+            border: 2px solid #000;
+            border-left: 6px solid #0f62fe;
+            padding: 1.5rem;
+            margin: 3rem 0;
+            font-size: 0.9375rem;
+        }
+
+        .note strong {
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 700;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        li strong {
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 2px solid #000;
+            text-align: center;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            opacity: 0.6;
+        }
+
+        footer p {
+            margin: 0.25rem 0;
+        }
+
+        .essay-link {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            padding: 0.75rem 1.25rem;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #000;
+            transition: all 0.15s ease;
+            z-index: 100;
+        }
+
+        .essay-link:hover {
+            background: #0f62fe;
+            border-color: #0f62fe;
+        }
+
+        @media (max-width: 768px) {
+            .essay-link {
+                position: static;
+                display: block;
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="essay-link">READ ESSAY ↗</a>
+
+    <div class="container">
+        <div class="experiment-header">
+            <div class="experiment-label">EXPERIMENT_01</div>
+            <h1>Machines Kept Their Promise<br>We Didn't</h1>
+            <p class="subtitle">Documented AI-Human Collaborative Writing Process</p>
+        </div>
+
+        <div class="meta">
+            <div class="meta-row">
+                <div class="meta-label">DATE:</div>
+                <div>2025.10.22</div>
+            </div>
+            <div class="meta-row">
+                <div class="meta-label">TOPIC:</div>
+                <div>Automation, productivity-pay divergence, unfulfilled 1960s promise</div>
+            </div>
+            <div class="meta-row">
+                <div class="meta-label">METHOD:</div>
+                <div>Human curation + data → AI synthesis</div>
+            </div>
+            <div class="meta-row">
+                <div class="meta-label">AI_MODEL:</div>
+                <div>Claude (Anthropic)</div>
+            </div>
+        </div>
+
+        <h2>Thesis</h2>
+        <p>
+            This is not merely an essay about automation — it is a <strong>documented process</strong>
+            demonstrating how AI functions as a writing partner when supplied with precise context and direction.
+        </p>
+        <p>
+            Rather than generic prompting ("write about automation"), this experiment provided:
+        </p>
+        <ul>
+            <li>Economic data spanning 1966-2025 (productivity-pay divergence)</li>
+            <li>Human sentiment capture (Reddit discourse, 70 comments)</li>
+            <li>Historical context (1960s technological optimism)</li>
+        </ul>
+        <p>
+            The AI's function: <strong>synthesize</strong> disparate sources into cohesive narrative with
+            emotional intelligence and analytical depth.
+        </p>
+
+        <h2>Process Pipeline</h2>
+
+        <div class="workflow">
+            <div class="workflow-item">RESEARCH</div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-item">CONTEXT</div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-item">PROMPT</div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-item">SYNTHESIS</div>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-step" data-step="STEP_00">
+                <h3>Prompt Engineering & Instructions</h3>
+                <p>
+                    Explicit AI directive specifying tone, style, structure, and collaboration approach.
+                    Documents what the AI was asked to do and how it should approach synthesis.
+                </p>
+                <div class="metric">
+                    <strong>DIRECTIVE:</strong> Hybrid style (The Atlantic + Wired), co-authorship transparency, human-AI dialogue moments
+                </div>
+                <a href="00-prompt-instructions.txt" target="_blank">VIEW PROMPT ↗</a>
+            </div>
+
+            <div class="process-step" data-step="STEP_01">
+                <h3>Research & Data Collection</h3>
+                <p>
+                    Comprehensive economic data aggregated from Economic Policy Institute,
+                    U.S. Census Bureau, and Bureau of Labor Statistics documenting productivity-pay
+                    divergence across six decades.
+                </p>
+                <div class="metric">
+                    <strong>KEY_FINDING:</strong> Productivity +87% (1979-2025) vs. Pay +33% (1979-2025)
+                </div>
+                <a href="01-research-economic-data.txt" target="_blank">VIEW RESEARCH ↗</a>
+            </div>
+
+            <div class="process-step" data-step="STEP_02">
+                <h3>Human Context & Sentiment Capture</h3>
+                <p>
+                    Reddit thread (r/artificial) archived: Amazon announcing 600,000 worker replacement
+                    by 2033. 70 comments analyzed for sentiment, debate structure, and collective anxiety.
+                </p>
+                <div class="metric">
+                    <strong>SENTIMENT:</strong> 72% negative valence | Primary themes: UBI debate, economic collapse, fatalism
+                </div>
+                <a href="02-context-reddit-thread.txt" target="_blank">VIEW THREAD ↗</a>
+            </div>
+
+            <div class="process-step" data-step="STEP_03">
+                <h3>AI Synthesis & Output</h3>
+                <p>
+                    AI (Claude) combined 1966 TIME prophecy, 60 years of economic data, and Reddit
+                    discourse into cohesive essay. Style: analytical-reflective hybrid with meta-awareness
+                    of human-machine co-authorship.
+                </p>
+                <div class="metric">
+                    <strong>OUTPUT:</strong> 1,180 words | Collaborative voice | Human-AI dialogue integrated
+                </div>
+                <a href="index.html">READ ESSAY ↗</a>
+            </div>
+        </div>
+
+        <h2>Learning Observations</h2>
+
+        <div class="learning-grid">
+            <div class="learning-item">
+                <strong>01_CURATION > PROMPTING</strong>
+                <p>Quality of source material determines output quality. Generic prompting yields generic output.</p>
+            </div>
+            <div class="learning-item">
+                <strong>02_PATTERN_RECOGNITION</strong>
+                <p>AI connected Reddit folk economics to 50 years of BLS data — patterns invisible in isolation.</p>
+            </div>
+            <div class="learning-item">
+                <strong>03_TRANSPARENCY</strong>
+                <p>Documenting the process builds reader trust. Black-box output lacks credibility.</p>
+            </div>
+            <div class="learning-item">
+                <strong>04_VOICE_ITERATION</strong>
+                <p>Collaboration style emerges through repeated experiments, not first attempt.</p>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>NOTE:</strong> This is experiment #1 in an ongoing series exploring AI as writing partner.
+            Goal: Document how thoughtful human-AI collaboration produces work neither could create alone.
+            Not replacement. Augmentation through intentional design.
+        </div>
+
+        <h2>Future Experiments</h2>
+        <p>Planned exploration vectors:</p>
+        <ul>
+            <li>Variable writing styles: investigative journalism, personal narrative, technical analysis</li>
+            <li>Contribution ratios: human-heavy vs. AI-heavy synthesis</li>
+            <li>Embedded data visualization within narrative structure</li>
+            <li>Multi-source integration: academic papers, interviews, social media, sensor data</li>
+            <li>Real-time collaborative editing workflows</li>
+        </ul>
+
+        <footer>
+            <p>AI_WRITING_PARTNERSHIP_EXPERIMENTS</p>
+            <p>HUMAN_CURATOR + AI_COLLABORATOR</p>
+            <p>2025</p>
+        </footer>
+    </div>
+</body>
+</html>

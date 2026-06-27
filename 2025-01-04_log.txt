@@ -1,0 +1,191 @@
+# January 4, 2025 - Development Log
+
+## Posts Structure and Components
+
+### Newsletter and Feedback Components
+- Streamlined the newsletter signup and feedback button components
+- Removed bulky background cards and excessive padding
+- Made components more compact and modern
+- Updated styling to be consistent with site design
+
+### AI vs Traditional Automation Post
+- Created new post structure in `/app/posts/ai-vs-traditional-automation/`
+- Set up `page.tsx` with MDX rendering configuration
+- Created `content.mdx` with proper frontmatter
+- Fixed smart quotes issue in frontmatter
+- Added post to `data/posts.ts` for listing
+
+### Content Structure
+- Maintained original content while improving formatting
+- Added proper section headers for navigation
+- Implemented clean separation between sections
+- Added streamlined feedback and newsletter components at bottom
+
+### Technical Fixes
+- Fixed frontmatter formatting (replaced smart quotes with regular quotes)
+- Added proper MDX imports
+- Set up proper page structure
+- Added post metadata to posts listing
+
+### Required Assets
+- Need to add author image at `/images/author.jpg`
+- Need to add post image at `/images/ai-automation.jpg`
+
+## Next Steps
+- Verify all images are in place
+- Test post rendering
+- Check mobile responsiveness
+- Verify newsletter and feedback components are working correctly 
+
+## UI and Component Updates
+- Fixed hydration issues in MDX provider
+- Updated tooltip implementation in section headers
+- Added proper type definitions for profile types
+- Improved profile switching functionality
+- Fixed import paths for UI components to include /app/ prefix
+- Added TooltipProvider with proper configuration
+- Enhanced tooltip styling and positioning
+- Fixed profile toggle state management
+
+## Bug Fixes
+- Resolved nested paragraph hydration errors in MDX
+- Fixed tooltip display issues in section headers
+- Corrected import paths causing build failures
+- Resolved profile switching state issues
+- Added proper type guards for creator/personal profiles
+- Fixed tooltip trigger visibility on mobile
+
+## Styling Improvements
+- Enhanced tooltip visual feedback
+- Improved hover states for help icons
+- Added proper spacing in section headers
+- Made tooltips more responsive
+- Updated icon opacity for better visibility
+- Added proper transitions for hover states
+
+## Build and Performance
+- Fixed build errors related to incorrect imports
+- Resolved TypeScript type errors
+- Improved component reusability
+- Enhanced state management for profile switching
+- Optimized tooltip rendering performance
+
+## MDX Implementation Updates (Recent Changes)
+
+### Component Structure
+- Created dedicated MDX components directory
+- Implemented client/server component separation
+- Added proper MDX provider setup
+- Created reusable MDX components (Callout, CodeBlock, etc.)
+- Fixed hydration issues with nested paragraphs
+
+### MDX Provider Setup
+- Created client-side MDX provider wrapper
+- Fixed context issues in server components
+- Implemented proper component hierarchy
+- Added support for frontmatter in MDX content
+- Enhanced MDX component type safety
+
+### Page Component Updates
+- Restructured page.tsx for better MDX handling
+- Added proper error handling with Next.js notFound()
+- Implemented responsive article layout
+- Added metadata display (date, reading time)
+- Enhanced content styling with Tailwind Typography
+
+### Styling Enhancements
+- Added comprehensive MDX styles in mdx.css
+- Implemented proper table styling
+- Enhanced code block presentation
+- Added responsive design for all MDX elements
+- Improved typography and spacing
+
+### Component Improvements
+- Enhanced Callout component with better styling
+- Added copy functionality to CodeBlock
+- Implemented responsive PostImage component
+- Added Tags component with proper routing
+- Enhanced AuthorBio component layout
+- Improved NewsletterSignup and FeedbackButtons
+
+### Bug Fixes
+- Resolved hydration errors with nested paragraphs
+- Fixed MDX context issues
+- Corrected component import paths
+- Enhanced error handling in MDX loading
+- Improved type safety across components
+
+### Next.js Configuration
+- Updated next.config.mjs with MDX plugins
+- Added remark and rehype plugins
+- Configured proper MDX provider source
+- Enhanced build performance
+- Added proper file extensions handling
+
+## Typography and Markdown Implementation (Latest Changes)
+
+### Package Installation
+- Installed @tailwindcss/typography plugin with --legacy-peer-deps to resolve dependency conflicts
+- Verified proper installation and configuration in package.json
+
+### Content Migration
+- Converted raw HTML content to Markdown format in posts
+- Implemented ReactMarkdown with remarkGfm plugin for GitHub-flavored markdown support
+- Added proper prose classes for typography styling
+- Enhanced dark mode support with dark:prose-invert
+
+### Component Updates
+- Updated PostContent component to use ReactMarkdown
+- Added proper className configuration for typography
+- Implemented consistent styling across all post content
+- Enhanced heading hierarchy and list styling
+
+### Styling Fixes
+- Fixed heading and list styling issues
+- Implemented proper spacing between elements
+- Enhanced typography consistency across posts
+- Added proper dark mode support for all typography elements 
+
+## Recent Development Updates
+
+### Font Configuration Fix
+- Fixed Inter font configuration in layout.tsx
+- Changed 'weights' property to 'weight'
+- Updated weight values to be strings: ['400', '500', '600']
+- Resolved TypeScript type error for font configuration
+
+### Package Dependencies Resolution
+- Installed remark-gfm with legacy peer deps flag
+- Resolved date-fns version conflict using --legacy-peer-deps
+- Command used: `npm install remark-gfm --legacy-peer-deps`
+- Fixed "Cannot find module 'remark-gfm'" error
+
+### Core Dependencies Documentation
+- Documented core dependencies:
+  - next (App Router)
+  - react and react-dom
+  - typescript
+
+### UI and Styling Dependencies
+- Documented UI dependencies:
+  - tailwindcss (with postcss, autoprefixer)
+  - class-variance-authority
+  - clsx and tailwind-merge
+  - @radix-ui components
+  - lucide-react
+
+### shadcn/ui Components
+- Documented pre-configured components:
+  - Button
+  - Switch
+  - Label
+  - Input
+  - Tooltip
+  - RadioGroup
+  - Select
+
+### Build and Configuration
+- Verified all components working in Next.js runtime
+- Confirmed pre-installed dependencies
+- Documented import patterns
+- Updated component configurations 

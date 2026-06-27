@@ -1,0 +1,40 @@
+# January 6, 2025 - Development Log
+
+## Social Sharing and Layout Updates
+
+### Added Social Share Buttons
+- Implemented social share buttons for blog posts using react-share
+- Added support for Twitter, LinkedIn, and Facebook sharing
+- Customized button styling to match site's aesthetic
+- Integrated with MDX layout for seamless sharing experience
+
+### Layout Improvements
+- Removed author bio section from posts for a cleaner look
+- Simplified post metadata interface
+- Updated MDX layout to be more minimal and focused on content
+
+### Technical Details
+- Used react-share library for reliable social sharing functionality
+- Customized share button appearance with transparent backgrounds and theme-aware colors
+- Maintained responsive design and accessibility
+- Properly encoded share URLs and titles for social platforms
+
+### Next Steps
+- Consider adding Open Graph meta tags for better social media previews
+- Monitor social sharing analytics
+- Gather user feedback on the new sharing functionality
+
+## Contact Information Updates
+
+### Footer Enhancements
+- Added "contact me" link with email icon in footer
+- Integrated with existing footer layout alongside theme toggle
+- Maintained clean, minimal aesthetic with hover effects
+- Updated email to use brandonzhoff@gmail.com
+
+### Profile Updates
+- Removed newsletter and telegram links from creator profile
+- Moved email contact to connect section
+- Streamlined social links to focus on key platforms (TikTok, YouTube)
+- Updated email information across all contact points
+

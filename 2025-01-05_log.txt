@@ -1,0 +1,119 @@
+# Development Log - January 5, 2025
+
+## Dependency Updates
+1. Fixed date-fns version conflict:
+   - Updated from 4.1.0 to ^3.6.0 to resolve react-day-picker compatibility
+
+## Profile Updates
+1. Changed Personal to Professional in profile switcher
+2. Updated switch styling for a more subtle, tech-inspired look
+3. Removed duplicate email display
+4. Reorganized social/connect links:
+   - Content platforms (TikTok, YouTube)
+   - Professional networking (LinkedIn)
+   - Social (Twitter)
+
+## UI Improvements
+1. Enhanced profile switcher:
+   - Added emerald-600 color for creator mode
+   - Improved switch transitions
+   - Updated text to Professional/Creator
+   - Added subtle background and shadows
+
+2. Switch Component Updates:
+```tsx
+// Updated switch styling
+"peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border border-transparent bg-zinc-200 transition-colors duration-200 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-emerald-600 data-[state=unchecked]:bg-zinc-200 dark:data-[state=checked]:bg-emerald-500 dark:data-[state=unchecked]:bg-zinc-800/40"
+```
+
+## Git Operations
+```bash
+# Added and committed changes
+git add .
+git commit -m "Major portfolio updates: Enhanced profile switcher with Professional/Creator toggle, updated styling, removed email duplication, cleaned up unused files and improved overall UX"
+git push origin main
+
+# Fixed dependencies
+git add package.json package-lock.json
+git commit -m "fix: update date-fns to v3.6.0 to resolve dependency conflict with react-day-picker"
+git push origin main
+```
+
+## Domain Configuration
+1. Added custom domain bzhoff.com
+2. Namecheap DNS Configuration:
+   - A Record:
+     Host: @
+     Value: 76.76.21.21
+     TTL: Automatic
+   - CNAME Record:
+     Host: www
+     Value: cname.vercel-dns.com
+     TTL: Automatic
+
+## Deployment
+1. Successfully deployed to Vercel:
+   - Fixed dependency conflicts
+   - Verified build process
+   - Command used: `vercel deploy --prod`
+
+## Notes
+- Build process successful after dependency fix
+- All components properly styled and functioning
+- Profile toggle working as expected
+- Social links properly organized
+
+## Next Steps
+1. Monitor DNS propagation for bzhoff.com
+2. Verify SSL certificate installation
+3. Test all links with new domain
+4. Update any remaining references to vercel.app domain
+
+## Additional Activities (Later in the Day)
+1. Discussed TikTok external link warnings and potential solutions
+   - Learned about TikTok's business verification process
+   - Explored alternatives like Linktree
+
+2. Explored Full-Stack Development requirements
+   - Discussed frontend, backend, and additional skills needed
+   - Covered main components: HTML, CSS, JavaScript, React, databases, etc.
+
+3. Discussed DevOps basics
+   - Covered CI/CD concepts
+   - Cloud platforms
+   - Containerization
+   - Infrastructure as Code
+   - Monitoring and logging
+   - Version control
+
+4. Verified Vercel Speed Insights installation
+   - Confirmed package installation (@vercel/speed-insights ^1.1.0)
+   - Verified proper implementation in app/layout.tsx
+   - Component correctly imported and placed
+
+## Bug Fixes and Improvements (Evening Update)
+1. Fixed button functionality issues:
+   - Resolved "Read more" button not working
+   - Fixed "View more projects" toggle
+   - Updated button event handlers
+   - Consolidated providers in layout.tsx
+   - Removed duplicate providers from page.tsx
+
+2. Enhanced component organization:
+   - Moved providers to root layout
+   - Improved state management
+   - Fixed event bubbling issues
+   - Cleaned up component hierarchy
+
+3. Development server maintenance:
+   - Cleared Next.js cache
+   - Rebuilt project
+   - Updated port configuration
+   - Resolved JavaScript chunk loading errors
+
+## Development Documentation (End of Day)
+1. Implemented daily logging system
+   - Created date-based log file structure (YYYY-MM-DD_log.txt)
+   - Established sections for different types of updates
+   - Added detailed documentation of all development activities
+   - Set up format for tracking changes, improvements, and future tasks
