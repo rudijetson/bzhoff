@@ -23,9 +23,9 @@ export const primaryCaseStudy: CaseStudy = {
   participants: 23,
   duration: "10-month engagement (Aug 2025 – ongoing)",
   results: [
-    { label: "Documented ROI", value: "524%" },
-    { label: "Comfort level achieved", value: "95%" },
-    { label: "Literacy gains in 8 weeks", value: "60%" },
+    { label: "Competency progression", value: "Novice → Intermediate" },
+    { label: "Positive sentiment", value: "92%" },
+    { label: "Evaluation completion", value: "100%" },
     { label: "Reduction in evaluation time", value: "85%" },
   ],
   summary:

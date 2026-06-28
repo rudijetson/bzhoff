@@ -100,7 +100,7 @@ export const timeline: TimelineEntry[] = [
     date: "2025-08",
     category: "engagement",
     title: "Warren County ESC Engagement Begins",
-    description: "10-month AI literacy program for 23 Ohio educators; documented 524% ROI.",
+    description: "10-month AI literacy program for 23 Ohio educators; novice to intermediate in 30 days, 85% less evaluation time.",
   },
   {
     date: "2025-11",

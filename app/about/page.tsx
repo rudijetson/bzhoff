@@ -99,7 +99,7 @@ export default function AboutPage() {
             </p>
 
             <p className="text-base mb-4">
-              That conviction became RUDI (Responsible Use, Digital Intelligence), a structured AI adoption framework built on the principle that psychological comfort must precede technical competency. The RUDI methodology—three swim lanes (Conceptual, Operational, Governance) across five proficiency levels—is now deployed at educational service centers, universities, law firms, and enterprise organizations. Its flagship engagement with Warren County ESC produced a documented 524% ROI: 95% comfort achieved, 60% literacy gains in eight weeks, and an 85% reduction in teacher evaluation time (from 2–3 hours to 15–20 minutes per evaluation).
+              That conviction became RUDI (Responsible Use, Digital Intelligence), a structured AI adoption framework built on the principle that psychological comfort must precede technical competency. The RUDI methodology—three swim lanes (Conceptual, Operational, Governance) across five proficiency levels—is now deployed at educational service centers, universities, law firms, and enterprise organizations. Its flagship engagement with Warren County ESC moved 23 educators from novice to intermediate AI competency in 30 days, with 92% positive sentiment and an 85% reduction in teacher evaluation time (from 2–3 hours to 15–20 minutes per evaluation).
             </p>
 
             <p className="text-base mb-8">
@@ -127,11 +127,11 @@ export default function AboutPage() {
             <h2 className="!mt-12">Get in Touch</h2>
             <div className="flex flex-col gap-4 not-prose">
               <Link
-                href="mailto:brandonzhoff@gmail.com"
+                href="mailto:hoff@learnrudi.com"
                 className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail className="h-4 w-4" />
-                brandonzhoff@gmail.com
+                hoff@learnrudi.com
               </Link>
               <div className="flex items-center gap-3">
                 <Button variant="ghost" size="sm" className="gap-2" asChild>
