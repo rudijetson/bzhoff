@@ -83,7 +83,7 @@ app/
 Canonical founder/profile source lives at:
 
 ```text
-/Users/hoff/dev/RUDI/content/
+/Users/<user>/RUDI/business/content-and-brand/_resources/
 ```
 
 Useful source folders:
@@ -97,11 +97,11 @@ Useful source folders:
 
 Existing standalone HTML references that should be integrated into this app:
 
-- `/Users/hoff/dev/RUDI/content/sendable/media-kit/`
-- `/Users/hoff/dev/RUDI/content/sendable/work-with-me/`
+- `/Users/<user>/RUDI/business/content-and-brand/_resources/sendable/media-kit/`
+- `/Users/<user>/RUDI/business/content-and-brand/_resources/sendable/work-with-me/`
 
 ## Cleanup Notes
 
 - `.next/`, `node_modules/`, and `tsconfig.tsbuildinfo` are rebuildable local artifacts.
 - `.claude/` is local agent state and should not be committed.
-- Keep profile facts aligned with `content/`.
+- Keep profile facts aligned with `business/content-and-brand/_resources/`.
